@@ -1,1 +1,47 @@
 <p>abput works!</p>
+
+
+<table>
+    <tr>
+      <th>Israel</th>
+      <th>cases</th>
+      <th>todayCases</th>
+      <th>recovered</th>
+      <th>active</th>
+      <th>totalTests</th>
+    </tr>
+    <tr *ngFor="let x of apicronisrael">
+        <td>{{x.country}}</td>
+      <td>{{x.cases }}</td>
+      <td>{{x.todayCases }}</td>
+      <td>{{x.recovered}}</td>
+      <td>{{x.active}}</td>
+      <td>{{x.totalTests }}</td>
+    </tr>
+  </table>
+
+
+  <br> <hr> <br>
+
+
+
+
+<table>
+    <tr>
+      <th>country</th>
+      <th>cases</th>
+      <th>todayCases</th>
+      <th>recovered</th>
+      <th>active</th>
+      <th>totalTests</th>
+    </tr>
+    <tr *ngFor="let x of apicronaviros">
+        <td>{{x.country}}</td>
+      <td>{{x.cases }}</td>
+      <td>{{x.todayCases }}</td>
+      <td>{{x.recovered}}</td>
+      <td>{{x.active}}</td>
+      <td>{{x.totalTests }}</td>
+    </tr>
+  </table>
+  

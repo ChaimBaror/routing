@@ -10,15 +10,16 @@ import { AbputComponent } from './compns/abput/abput.component';
 const routes: Routes = [
   { path: 'home', component: C1Component, 
       children: [
-        { path: 'news', component: NewsComponent },
-        { path: 'contact', component: C3Component },
-        { path: 'about', component: AbputComponent },
+        { path:'News', component:NewsComponent },
+        
+        { path:'about', component:AbputComponent },
 
 
         { path:'**', redirectTo: 'home', pathMatch: 'full' },
 ]
 },
   { path: 'db', component: C2Component },
+  { path: 'contact', component: C3Component },
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   // { path:'**' , component:NotFoundComponent},

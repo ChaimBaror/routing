@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { GiapitService } from 'src/app/serves/giapit.service';
+
+
 
 @Component({
   selector: 'app-c3',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class C3Component implements OnInit {
 
+
+  apicronaviros:object
   constructor() { }
 
+
   ngOnInit(): void {
+
+   
   }
 
 }
