@@ -8,16 +8,17 @@ import { AbputComponent } from './compns/abput/abput.component';
 
 
 const routes: Routes = [
-  { path: 'home', component: C1Component, 
-      children: [
-        { path:'News', component:NewsComponent },
-        
-        { path:'about', component:AbputComponent },
+  {
+    path: 'home', component: C1Component,
+    children: [
 
+      { path: 'News', component: NewsComponent },
+      { path: 'contact', component: C2Component },
+      { path: 'about', component: AbputComponent },
 
-        { path:'**', redirectTo: 'home', pathMatch: 'full' },
-]
-},
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+    ]
+  },
   { path: 'db', component: C2Component },
   { path: 'contact', component: C3Component },
 

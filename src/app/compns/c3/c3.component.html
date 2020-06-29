@@ -1,19 +1,65 @@
 <p>c3 works!</p>
-<div>
-    <form action="/action_page.php">
+
+<div class="container">
+
+  <h1>New person</h1>
+  <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <div class="form-group">
       <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
-  
+      <input type="text" class="form-control" id="fname" required [(ngModel)]="model.name" name="name">
+    </div>
+
+    <div class="form-group">
       <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-  
-      <label for="country">Country</label>
-      <select id="country" name="country">
-        <option value="australia">Australia</option>
-        <option value="canada">Canada</option>
-        <option value="usa">USA</option>
+      <input type="text" class="form-control" id="lname" required [(ngModel)]="model.LastName" name="LastName">
+    </div>
+
+    <div class="form-group">
+      <label for="Country">Country</label>
+      <select class="form-control" id="Country" required [(ngModel)]="model.Country" name="Country">
+        <option *ngFor="let Country of Countrys" [value]="Country">{{Country}}</option>
       </select>
-    
-      <input type="submit" value="Submit">
-    </form>
-  </div>
+    </div>
+
+    <button type="submit" class="btn btn-success" (click)="addmodel(heroForm.value)" [disabled]="!heroForm.form.valid">Submit</button>
+
+    <button type="button" class="btn btn-default" (click)="newPerson(); heroForm.reset()">New User</button>
+  </form>
+</div>
+
+
+
+
+
+<div [hidden]="!submitted"  >
+  <h2>You submitted the following:</h2>
+  <section *ngFor="let pers of persons">
+    <div class="col-xs-3">Name : {{ pers.name }}</div>
+    <div class="col-xs-3">Last Name : {{ pers.LastName }}</div>
+    <div class="col-xs-3">Country : {{ pers.Country }} </div>
+    <hr>
+  </section>
+  <br>
+  <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+</div>
+
+<!-- 
+<div>
+  <form action="">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+      <option value="usa">Israel</option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
+</div> -->

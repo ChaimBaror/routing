@@ -1,7 +1,7 @@
 <p>abput works!</p>
 
 
-<table>
+<table >
     <tr>
       <th>Israel</th>
       <th>cases</th>
@@ -11,11 +11,11 @@
       <th>totalTests</th>
     </tr>
     <tr *ngFor="let x of apicronisrael">
-        <td>{{x.country}}</td>
+        <td >{{x.country}}</td>
       <td>{{x.cases }}</td>
       <td>{{x.todayCases }}</td>
       <td>{{x.recovered}}</td>
-      <td>{{x.active}}</td>
+      <td style="background-color :aqua" >{{x.active}}</td>
       <td>{{x.totalTests }}</td>
     </tr>
   </table>
@@ -40,7 +40,7 @@
       <td>{{x.cases }}</td>
       <td>{{x.todayCases }}</td>
       <td>{{x.recovered}}</td>
-      <td>{{x.active}}</td>
+      <td >{{x.active}}</td>
       <td>{{x.totalTests }}</td>
     </tr>
   </table>

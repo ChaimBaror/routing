@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { person } from '../c3/c3.component';
 
 @Component({
   selector: 'app-c2',
@@ -11,6 +12,13 @@ export class C2Component implements OnInit {
 
   ngOnInit(): void {
 
+  }
+  persons:person[]
+
+  additme(itme:person){
+    console.log("wath is itme ",itme);
+    
+    this.persons.push(itme)
   }
 
 }

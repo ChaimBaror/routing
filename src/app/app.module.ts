@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { C1Component } from './compns/c1/c1.component';
 import { C2Component } from './compns/c2/c2.component';
 import { C3Component } from './compns/c3/c3.component';
+import { FormsModule }   from '@angular/forms';
+
 import { NewsComponent } from './compns/news/news.component';
 import { AbputComponent } from './compns/abput/abput.component';
 
@@ -22,7 +24,8 @@ import { AbputComponent } from './compns/abput/abput.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
